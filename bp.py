@@ -69,10 +69,10 @@ def lines_printed_random(lines):
     pass
  
 def my_custom(lines):
-    index = 0
-    while index < len(poem):
-        print(len(poem))
-        index += 1
+    lines.sort()
+    # del lines[-1]
+    for line in lines:
+        print(line)
     '''
     Does something of my choosing
     '''
@@ -84,6 +84,6 @@ lines_list = poem.split("\n")
 # print(lines_list)
  
 #Testing code
-print(lines_printed_backwards(lines))
+# print(lines_printed_backwards(lines))
 # print(lines_printed_random)
-# print(my_custom(lines))
+print(my_custom(lines))
