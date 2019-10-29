@@ -1,21 +1,49 @@
 import random
 
 poem ='''
-Hold fast to dreams 
-For if dreams die
-Life is a broken-winged bird
-That cannot fly.
-Hold fast to dreams
-For when dreams go
-Life is a barren field
-Frozen with snow.
+Once more unto the breach, dear friends, once more;
+Or close the wall up with our English dead.
+In peace there's nothing so becomes a man
+As modest stillness and humility:
+But when the blast of war blows in our ears,
+Then imitate the action of the tiger;
+Stiffen the sinews, summon up the blood,
+Disguise fair nature with hard-favour'd rage;
+Then lend the eye a terrible aspect;
+Let pry through the portage of the head
+Like the brass cannon; let the brow o'erwhelm it
+As fearfully as doth a galled rock
+O'erhang and jutty his confounded base,
+Swill'd with the wild and wasteful ocean.
+Now set the teeth and stretch the nostril wide,
+Hold hard the breath and bend up every spirit
+To his full height. On, on, you noblest English.
+Whose blood is fet from fathers of war-proof!
+Fathers that, like so many Alexanders,
+Have in these parts from morn till even fought
+And sheathed their swords for lack of argument:
+Dishonour not your mothers; now attest
+That those whom you call'd fathers did beget you.
+Be copy now to men of grosser blood,
+And teach them how to war. And you, good yeoman,
+Whose limbs were made in England, show us here
+The mettle of your pasture; let us swear
+That you are worth your breeding; which I doubt not;
+For there is none of you so mean and base,
+That hath not noble lustre in your eyes.
+I see you stand like greyhounds in the slips,
+Straining upon the start. The game's afoot:
+Follow your spirit, and upon this charge
+Cry 'God for Harry, England, and Saint George!'
 '''
 #TODO: get a list of strings that contains lines of poem
 
-def lines_printed_backwards(poem_lines_list):
-    poem_lines_list.reverse()
-    for poem_line in poem_lines_list:
-        print(poem_line)
+def lines_printed_backwards(lines):
+    # lines_list = poem.split("\n")
+    # print(lines_list)
+    lines.reverse()
+    for line in lines:
+        print(line)
         # print(lines_printed_backwards)
     ''' This function takes in a list of 
     strings containing the lines of 
@@ -25,12 +53,12 @@ def lines_printed_backwards(poem_lines_list):
     with the line numbers reversed.'''
     
 
-def lines_printed_random():
+def lines_printed_random(lines):
     # poem.randint()
-    index = 0
-    while index < len(poem):
-        print(poem[index])
-        index += 1
+    num_lines = 0
+    while num_lines < len(poem):
+        print(poem)
+        num_lines += 1
     ''' Your code should implement the lines_printed_random() 
     function which will randomly select lines from a list of 
     strings and print them out in random order. Repeats are 
@@ -40,15 +68,22 @@ def lines_printed_random():
     Hint: try using a loop and randint()  '''
     pass
  
-def my_custom():
+def my_custom(lines):
+    index = 0
+    while index < len(poem):
+        print(len(poem))
+        index += 1
     '''
     Does something of my choosing
     '''
     pass 
 
 #TODO: get a list of strings that contains lines of poem
-#Use lines = poem.split("\n")
- 
+lines = poem.split("\n")
+lines_list = poem.split("\n")
+# print(lines_list)
  
 #Testing code
-# lines_printed_backwards(poem_lines_list)
+print(lines_printed_backwards(lines))
+# print(lines_printed_random)
+# print(my_custom(lines))
