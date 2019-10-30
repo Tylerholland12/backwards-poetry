@@ -41,11 +41,21 @@ def my_custom(lines):
     lines printed in alphabetical order when funtion is called
     '''
 
+def shuffle(lines):
+    random.shuffle(lines)
+    for line in lines:
+        print(line)
+    '''
+    lines will be placed randomly in the poem. the differnce between this function and lines_printed_random is that this function 
+    displays the entire poem and not just singular lines
+    '''
+
 #TODO: get a list of strings that contains lines of poem
 lines = poem.split("\n")
 random_lines = random.choice(lines).split("\n")
 
-#Testing code
-# print(lines_printed_backwards(lines))
+# Testing code
+print(lines_printed_backwards(lines))
 print(lines_printed_random(random_lines))
-# print(my_custom(lines))
+print(my_custom(lines))
+print(shuffle(lines))
