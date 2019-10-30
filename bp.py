@@ -1,7 +1,7 @@
 import random
+from random import randint
 
-poem ='''
-Once more unto the breach, dear friends, once more;
+poem ='''Once more unto the breach, dear friends, once more;
 Or close the wall up with our English dead.
 In peace there's nothing so becomes a man
 As modest stillness and humility:
@@ -36,6 +36,7 @@ Straining upon the start. The game's afoot:
 Follow your spirit, and upon this charge
 Cry 'God for Harry, England, and Saint George!'
 '''
+
 #TODO: get a list of strings that contains lines of poem
 
 def lines_printed_backwards(lines):
@@ -53,12 +54,9 @@ def lines_printed_backwards(lines):
     with the line numbers reversed.'''
     
 
-def lines_printed_random(lines):
-    # poem.randint()
-    num_lines = 0
-    while num_lines < len(poem):
-        print(poem)
-        num_lines += 1
+def lines_printed_random(lines, random_lines):
+    for random_line in random_lines:
+        print(random_line)
     ''' Your code should implement the lines_printed_random() 
     function which will randomly select lines from a list of 
     strings and print them out in random order. Repeats are 
@@ -66,24 +64,23 @@ def lines_printed_random(lines):
     to the original number of lines in the poem 
     (line numbers don't need to be printed). 
     Hint: try using a loop and randint()  '''
-    pass
+    
  
 def my_custom(lines):
     lines.sort()
-    # del lines[-1]
+    lines.append('Zebras sleep in the dark')
     for line in lines:
         print(line)
     '''
     Does something of my choosing
     '''
-    pass 
 
 #TODO: get a list of strings that contains lines of poem
 lines = poem.split("\n")
-lines_list = poem.split("\n")
-# print(lines_list)
- 
+
+random_lines = random.choice(lines).split("\n")
+
 #Testing code
 # print(lines_printed_backwards(lines))
-# print(lines_printed_random)
-print(my_custom(lines))
+print(lines_printed_random(lines, random_lines))
+# print(my_custom(lines))
