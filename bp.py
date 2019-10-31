@@ -54,7 +54,6 @@ def shuffle(lines):
 
 # Testing code
 print(lines_printed_backwards(lines))
-# print(lines_printed_random(random_lines))
-# print(my_custom(lines))
-# print(shuffle(lines))
-# print(random_words(lines, random_lines))
+print(lines_printed_random(random_lines))
+print(my_custom(lines))
+print(shuffle(lines))
