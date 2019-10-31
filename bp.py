@@ -53,13 +53,6 @@ def shuffle(lines):
     displays the entire poem and not just singular lines
     '''
 
-def random_words(lines, random_lines):
-    item = 365
-    while item < len(poem):
-        random.shuffle(lines)
-        for line in lines:
-            print(line)
-            item += 1
 
 # Testing code
 print(lines_printed_backwards(lines))
