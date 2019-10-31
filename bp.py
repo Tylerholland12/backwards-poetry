@@ -15,23 +15,26 @@ let's dance together, intertwined
 like flowers in a storm
 '''
 
-#TODO: get a list of strings that contains lines of poem
+lines = poem.split("\n")
+random_lines = random.choice(lines).split("\n")
+
 
 def lines_printed_backwards(lines):
-
+    # index = len(lines)
+    i = len(lines)
     lines.reverse()
     for line in lines:
         print(line)
+        print(i)
+        i -= 1
         # print(lines_printed_backwards)
     ''' lines printed backwards when function is called'''
     
-
 def lines_printed_random(random_lines):
     for random_line in random_lines:
         print(random_line)
     ''' lines printed at random when the function is called'''
     
- 
 def my_custom(lines):
     lines.sort()
     lines.append('Zebras sleep in the dark')
@@ -50,12 +53,17 @@ def shuffle(lines):
     displays the entire poem and not just singular lines
     '''
 
-#TODO: get a list of strings that contains lines of poem
-lines = poem.split("\n")
-random_lines = random.choice(lines).split("\n")
+def random_words(lines, random_lines):
+    item = 365
+    while item < len(poem):
+        random.shuffle(lines)
+        for line in lines:
+            print(line)
+            item += 1
 
 # Testing code
 print(lines_printed_backwards(lines))
-print(lines_printed_random(random_lines))
-print(my_custom(lines))
-print(shuffle(lines))
+# print(lines_printed_random(random_lines))
+# print(my_custom(lines))
+# print(shuffle(lines))
+# print(random_words(lines, random_lines))
