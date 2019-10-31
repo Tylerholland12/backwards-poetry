@@ -18,7 +18,6 @@ like flowers in a storm
 lines = poem.split("\n")
 random_lines = random.choice(lines).split("\n")
 
-
 def lines_printed_backwards(lines):
     # index = len(lines)
     i = len(lines)
@@ -29,12 +28,12 @@ def lines_printed_backwards(lines):
         i -= 1
         # print(lines_printed_backwards)
     ''' lines printed backwards when function is called'''
-    
+
 def lines_printed_random(random_lines):
     for random_line in random_lines:
         print(random_line)
     ''' lines printed at random when the function is called'''
-    
+
 def my_custom(lines):
     lines.sort()
     lines.append('Zebras sleep in the dark')
@@ -52,7 +51,6 @@ def shuffle(lines):
     lines will be placed randomly in the poem. the differnce between this function and lines_printed_random is that this function 
     displays the entire poem and not just singular lines
     '''
-
 
 # Testing code
 print(lines_printed_backwards(lines))
